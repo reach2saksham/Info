@@ -44,7 +44,7 @@ All logo variants exist in **Dark Background** and **Light Background** options 
 ### 📥 Exporting Assets from Figma
 To manually export assets from the official Figma files:
 1. Select the component or frame in Figma.
-2. Use `Ctrl + C` or hold `Alt + Click and Drag` to duplicate/copy components.
+2. Use `Cmd/Ctrl + C` or hold `Option/Alt-drag` to duplicate/copy components.
 3. In the bottom-right panel of Figma, choose the desired format (**SVG** for scalable web vectors, **PNG** for raster images) and click **Export**.
 
 ---
@@ -72,7 +72,7 @@ AOSSIE uses **Inter** as its primary typeface across all digital applications, w
 
 ### Why Inter?
 - **Performance & Scalability**: Inter is an open-source, highly legible, optimized font family suitable for small screens and high-resolution displays.
-- **Consistency**: Prevents layout shift and eliminates reliance on licensed/unoptimized custom web fonts.
+- **Consistency**: Reduces reliance on licensed custom web fonts and ensures cross-platform visual uniformity.
 
 *Note: Project maintainers may request custom font pairings for specialized projects upon prior approval, with Inter serving as the default fallback.*
 
@@ -123,7 +123,7 @@ To maintain brand consistency across announcements and community updates, two po
 
 ### Template Type 2: Informative & Community Content
 - **Best Suited For**: Event details, workshop announcements, contributor spotlights, blog highlights, and educational content.
-- **Structure**: Heading + Description + Showpiece Image + CueForAction + Date Range + Source + CTA Button + Topic Tags (`{TAG1} • {TAG2} • {TAG3}`).
+- **Structure**: Heading + Description + Showpiece Image + CTA + Date Range + Source + CTA Button + Topic Tags (`{TAG1} • {TAG2} • {TAG3}`).
 
 ---
 
@@ -216,7 +216,7 @@ Below is the directory index providing clickable access to all local media asset
 | **AOSSIE Keycaps** | PNG | [`aossie_keycaps.png`](./Brand/Media%20Assets/Swags/aossie_keycaps.png) | Keycaps graphic swag |
 | **AOSSIE Sticker** | PNG | [`aossie_sticker.png`](./Brand/Media%20Assets/Swags/aossie_sticker.png) | Primary logo sticker cutout |
 | **Brewed for Builders**| PNG | [`brewed_for_builders.png`](./Brand/Media%20Assets/Swags/brewed_for_builders.png) | Coffee mug sticker graphic |
-| **Building Future** | PNG | [`building_future.png`](./Brand/Media%20Assets/Swags/building_future.png) | Kangaroo open source sticker |
+| **Building Future** | PNG | [`building_future.png`](./Brand/Media%20Assets/Swags/building_future.png) | Kangaroo open-source sticker |
 | **Coding Kangaroo** | PNG | [`coding_kangaroo.png`](./Brand/Media%20Assets/Swags/coding_kangaroo.png) | Coding Kangaroo sticker artwork |
 | **GitHub Contributions**| PNG | [`github_contributions.png`](./Brand/Media%20Assets/Swags/github_contributions.png) | Code • Contribute • Repeat graphic |
 | **Logomark Sticker** | PNG | [`logomark_sticker.png`](./Brand/Media%20Assets/Swags/logomark_sticker.png) | Australia binary map sticker cutout |
@@ -238,7 +238,7 @@ Below is the directory index providing clickable access to all local media asset
 ---
 
 ### 🎨 H. Project Logos & Icons
-**Directory Directories**: [`Project Icons/PNGs`](./Project%20Icons/PNGs/) | [`Project Icons/SVGs`](./Project%20Icons/SVGs/)
+**Directories**: [`Project Icons/PNGs`](./Project%20Icons/PNGs/) | [`Project Icons/SVGs`](./Project%20Icons/SVGs/)
 
 | Project Name | PNG Asset | SVG Asset |
 | :--- | :--- | :--- |
@@ -262,9 +262,9 @@ Below is the directory index providing clickable access to all local media asset
 
 ## 🤝 Summary Checklist for Contributors & Visitors
 
-- [x] Check the [AOSSIE Brand Kit Figma](https://www.figma.com/design/ywJ3jFa67bdQsN5XczrHy3/AOSSIE-s-Brand-Kit?node-id=0-1&t=ZhcV3uSoGJkrObo0-1) for live updates.
-- [x] Use **Golden Wallet** (`#FFCD00`) and **Baggy Green** (`#00843D`) as core brand colors.
-- [x] Use **Inter** as the default typeface.
-- [x] Download vector SVGs directly from the [Logos Hub Figma](https://www.figma.com/design/cQCpSQv0M6FAc62ncunx8s/Logos?node-id=0-1&t=8pZG0veAJXDpYwI0-1) or [Project Icons/SVGs](./Project%20Icons/SVGs/).
-- [x] Access local media assets directly from [Brand/Media Assets](./Brand/Media%20Assets/).
-- [x] Refer to [Drafts and BackUps Figma](https://www.figma.com/design/t0XXc7r3lTO3Y2m8HnU1Vv/Drafts-and-BackUps?node-id=0-1&t=CGmXm2dMtpXWMG89-1) for raw components and WIP templates.
+- [ ] Check the [AOSSIE Brand Kit Figma](https://www.figma.com/design/ywJ3jFa67bdQsN5XczrHy3/AOSSIE-s-Brand-Kit?node-id=0-1&t=ZhcV3uSoGJkrObo0-1) for live updates.
+- [ ] Use **Golden Wallet** (`#FFCD00`) and **Baggy Green** (`#00843D`) as core brand colors.
+- [ ] Use **Inter** as the default typeface.
+- [ ] Download vector SVGs directly from the [Logos Hub Figma](https://www.figma.com/design/cQCpSQv0M6FAc62ncunx8s/Logos?node-id=0-1&t=8pZG0veAJXDpYwI0-1) or [Project Icons/SVGs](./Project%20Icons/SVGs/).
+- [ ] Access local media assets directly from [Brand/Media Assets](./Brand/Media%20Assets/).
+- [ ] Refer to [Drafts and BackUps Figma](https://www.figma.com/design/t0XXc7r3lTO3Y2m8HnU1Vv/Drafts-and-BackUps?node-id=0-1&t=CGmXm2dMtpXWMG89-1) for raw components and WIP templates.
