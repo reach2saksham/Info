@@ -11,7 +11,7 @@
 4. [Manual & Hybrid Professional Workflows](#4-manual--hybrid-professional-workflows)
 5. [Designing Logos Directly in SVG (Proactive Vector-First Rules)](#5-designing-logos-directly-in-svg-proactive-vector-first-rules)
 6. [Preparing PNGs for Easier Conversion Later](#6-preparing-pngs-for-easier-conversion-later)
-7. [Quick Decision Tree & Summary Cheat Sheet](#8-quick-decision-tree--summary-cheat-sheet)
+7. [Quick Decision Tree & Summary Cheat Sheet](#7-quick-decision-tree--summary-cheat-sheet)
 
 ---
 
@@ -37,7 +37,7 @@ When contributing logos, banners, or brand icons to projects, choice of image fo
 
 Many free online "PNG to SVG" converters produce poor-quality files. Understanding how these tools operate helps explain why naive conversion fails.
 
-```
+```text
                   ┌─────────────────────────────────────────┐
                   │          Input PNG Logo File            │
                   └────────────────────┬────────────────────┘
@@ -96,8 +96,8 @@ When automated conversion is appropriate (for simple, high-contrast, flat shapes
 
 #### Option A: Adobe Illustrator (Image Trace)
 
-```
-[Import PNG] ──► [Go to Window > Image Trace] ──► [Ensure that the asset is selected] ──► [In Image Trace Select Mode = Colour (Recommended)] ──► [Click Trace] ──► [Go to File > Export > Export As ] ──► [Save the File]
+```text
+[Import PNG] ──► [Go to Window > Image Trace] ──► [Ensure asset is selected] ──► [In Image Trace Select Mode = Colour (Recommended)] ──► [Click Trace] ──► [Go to File > Export > Export As] ──► [Select SVG (svg) in Format Menu] ──► [Confirm SVG Options] ──► [Save .svg File]
 ```
 
 ---
@@ -122,9 +122,9 @@ For professional open-source brand assets, manual or hybrid vector reconstructio
 
 > [!TIP]
 > Manual recreation in Figma reduces average logo file sizes from **200 KB (PNG)** to **1–10 KB (SVG)**, providing crisp rendering at any screen resolution.
-But this process may require proficieny in Figma as a software along with the ability to use Pen tool in Figma which a contributor can learn for any available tutorials or articles online.
+> Note that this process requires proficiency in Figma and familiarity with its Pen tool, which contributors can easily learn from online tutorials or articles.
 
-```
+```text
 ┌─────────────────────────────────────────────────────────────────────────┐
 │                    Manual Reconstruction in Figma                       │
 ├─────────────────────────────────────────────────────────────────────────┤
@@ -137,7 +137,7 @@ But this process may require proficieny in Figma as a software along with the ab
 ```
 
 #### Step-by-Step Workflow:
-1. **Prepare Workspace**: Create a new frame in Figma matching the desired dimensions (Currently in [Logos Hub](https://www.figma.com/design/cQCpSQv0M6FAc62ncunx8s/Logos?node-id=0-1&t=8pZG0veAJXDpYwI0-1) Figma File the standardised dimesnions are set to `360 x 360 px`).
+1. **Prepare Workspace**: Create a new frame in Figma matching the desired dimensions (Currently in [Logos Hub](https://www.figma.com/design/cQCpSQv0M6FAc62ncunx8s/Logos?node-id=0-1&t=8pZG0veAJXDpYwI0-1) Figma File the standardised dimensions are set to `360 x 360 px`).
 2. **Import Reference**: Paste the PNG logo inside the frame. Lower opacity to `50%` and lock the layer (`Ctrl + Shift + L` / `Cmd + Shift + L` / Use the Lock Icon in Layers).
 3. **Use Geometric Primitives First**:
    - Do not manually draw circles or rectangles with the pen tool.
@@ -172,28 +172,28 @@ For logos containing gradients, drop shadows, inner depth, or layered effects (e
 
 To eliminate the need for PNG-to-SVG conversion entirely, follow these vector-first design rules when creating new logos or brand graphics.
 
-```
+```text
        ┌───────────────────────────────────────────────────────────────┐
        │             Vector-First Design Best Practices                │
        ├───────────────────────────────────────────────────────────────┤
        │  ✅ Design directly in vector tools (Figma/Illustrator)       │
        │  ✅ Align objects to Pixel Grid (Snap to Grid)                │
        │  ✅ Convert all typography/fonts to Outlines                  │
-       │  ✅ Outline all Strokes to filled paths                       │
-       │  ✅ Organize layers with descriptive IDs                      │
+       │  ✅ Handle Strokes appropriately (Preserve vs Outline)        │
+       │  ✅ Organize layers & configure SVG group IDs                 │
        └───────────────────────────────────────────────────────────────┘
 ```
 
 1. **Design Native Vectors**: Always create logos in Figma, Adobe Illustrator, Inkscape, or Affinity Designer. Never draw logos in raster-based software like Photoshop, Paint, or Canva (unless using vector export).
-2. **Pixel Grid Alignment**: Set up a square canvas (e.g., `360 x 360 px` or `512 x 512 px`) and enable **Snap to Pixel Grid**. This prevents fractional coordinate values (e.g., `x="12.3456"`) in exported SVG code.
+2. **Pixel Grid Alignment**: Set up a square canvas (e.g., `360 x 360 px` or `512 x 512 px`) and enable **Snap to Pixel Grid**. This helps reduce fractional coordinate values (e.g., `x="12.3456"`) in exported SVG code. Always inspect the exported SVG file for remaining fractional values, which can still occur after applying curves, boolean operations, transforms, or export steps.
 3. **Outline All Typography (Convert Text to Paths)**:
    - Raw text elements (`<text>Custom Font</text>`) break if the viewer does not have the font installed.
    - In Illustrator: Select text and press `Ctrl + Shift + O` (`Cmd + Shift + O`).
    - In Figma: Select text layer and press `Ctrl + E` (`Cmd + E`) or right-click > **Flatten**.
-4. **Outline Strokes**:
-   - Unexpanded strokes (`stroke-width="4"`) can distort when resized inside responsive containers.
-   - Convert critical strokes to filled paths (`Object > Path > Outline Stroke` in Illustrator or `Outline Stroke` in Figma).
-5. **Clean Layer Hierarchy**: Frame related elements and assign clean layer names (e.g., `project_logo`, `project_logomark`, `project_full_logo`). These translate directly to SVG group IDs (`<g id="project_logo">`), making the file themeable via CSS.
+4. **Stroke Handling (Outlining vs. Preserving Strokes)**:
+   - Preserve editable strokes when supported by your target renderer or production workflow. For responsive SVGs needing a constant stroke width regardless of scaling, set `vector-effect="non-scaling-stroke"` on the stroke element.
+   - Convert strokes to filled paths (`Object > Path > Outline Stroke` in Illustrator or **Outline stroke** in Figma) when your target renderer or asset pipeline specifically requires fixed, filled geometry.
+5. **Layer Hierarchy and SVG IDs**: Group Frame-related elements and assign clean, descriptive layer names (e.g., `project_logo`, `project_logomark`, `project_full_logo`) as an organizational convention. If your workflow relies on guaranteed SVG group IDs (e.g., `<g id="project_logo">`) for CSS styling or script targeting, ensure you enable Figma's "Include id attribute" (in SVG export options) or Illustrator's "Object IDs: Layer Names", configure SVGO to preserve IDs (`cleanupIDs: false`), and inspect the final SVG file to verify that the ID attributes are preserved.
 
 ---
 
@@ -201,7 +201,7 @@ To eliminate the need for PNG-to-SVG conversion entirely, follow these vector-fi
 
 If a draft image must initially be produced or exported as PNG before vectorization, follow these guidelines to make downstream vector conversion seamless:
 
-```
+```text
                           ┌───────────────────────────┐
                           │   Ideal Draft PNG Setup   │
                           └─────────────┬─────────────┘
@@ -210,10 +210,10 @@ If a draft image must initially be produced or exported as PNG before vectorizat
            ▼                            ▼                            ▼
   High Resolution              Clean Transparency            High Contrast
   • Min 2000×2000 px           • PNG-24 with Alpha           • Solid, flat colors
-  • 300 DPI canvas             • No baked grid/background    • Sharp, unblurred edges
+  • 300 DPI (Print metadata)   • No baked grid/background    • Sharp, unblurred edges
 ```
 
-1. **Export at High Resolution**: Create draft canvas at a minimum of **2000 x 2000 pixels** (300 DPI). High pixel density provides sharper edges for auto-tracing algorithms.
+1. **Export at High Resolution**: Create draft canvas at a minimum of **2000 x 2000 pixels** to provide high pixel density for sharper edges during auto-tracing. (Note: 300 DPI serves solely as print metadata and does not increase PNG pixel tracing detail).
 2. **Clean Alpha Transparency**: Export as **PNG-24** with transparent background. Never bake in white backgrounds, grey card backdrops, or fake checkerboard patterns.
 3. **Use Flat Colors & High Contrast**: Ensure clear visual distinction between logo elements and background.
 4. **Avoid Soft Raster Effects in Drafts**:
@@ -223,12 +223,11 @@ If a draft image must initially be produced or exported as PNG before vectorizat
 
 ---
 
-
 ## 7. Quick Decision Tree & Summary Cheat Sheet
 
 Use this decision tree to select the right workflow for your logo:
 
-```
+```text
                        Do you have a PNG logo?
                                  │
                  ┌───────────────┴───────────────┐
