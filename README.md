@@ -65,7 +65,10 @@ Note that:
   * [Evangelists](Roles/Evangelists.md)
   * [Ambassadors](Roles/Ambassadors.md)
   * [SocialMediaManagers](Roles/SocialMediaManager.md)
-* [Guides](./Guides/): tutorials explaining how to setup your coding environment optimally to work with AOSSIE projects.
+* **Guides:**
+  * [Local AI Setup](./Guides/Local-AI-Setup.md): setup local agentic coding environment using VS Code and Ollama.
+  * [PNG to SVG Logo Conversion & Vector Guidelines](./Guides/PNG-to-SVG-Conversion-Guide.md): guidelines and best practices for creating and converting PNG logos into optimized SVGs.
+
 
 
 ## 🤝 Final Note
