@@ -45,9 +45,15 @@ All logo variants exist in **Dark Background** and **Light Background** options 
 To manually export assets from the official Figma files:
 1. Select the component or frame in Figma.
 2. Use `Cmd/Ctrl + C` or hold `Option/Alt-drag` to duplicate/copy components.
-3. In the bottom-right panel of Figma, choose the desired format (**SVG** for scalable web vectors, **PNG** for raster images) and click **Export**.
+3. In the Export section of the right sidebar in Figma, add an **SVG** export configuration and click **Export**.
+
+> [!TIP]
+> **Need to convert a PNG logo to SVG or vector format?**  
+> Refer to our detailed [PNG to SVG Logo Conversion & Vector Guidelines](./Guides/PNG-to-SVG-Conversion-Guide.md) for step-by-step software workflows, auto-tracing parameters, and vector design standards.
+
 
 ---
+
 
 ## 🎨 3. Colour Scheme
 
